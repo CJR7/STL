@@ -16,14 +16,14 @@ if __name__ == '__main__':
     #print(folder,last)
     
     for i in range(folder):
-        onetarDir  = tarDir+str(i) +'/' 
+        onetarDir  = tarDir+str(i+900) +'/' 
             # 判断文件夹是否存在，不存在则创建
         if not os.path.exists(onetarDir):
             os.makedirs(onetarDir)
             
         moveFile(fileDir,onetarDir,50)
     if last!=0:
-        lastDir = tarDir+str(folder) +'/'
+        lastDir = tarDir+str(folder+900) +'/'
         if not os.path.exists(lastDir):
             os.makedirs(lastDir)    
         moveFile(fileDir,lastDir,last)
